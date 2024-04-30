@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //Meng-override metode build() untuk membangun UI (antarmuka pengguna) dari aplikasi.
     return MaterialApp(
-      title: 'Klinik APP',
+      title: //Properti title digunakan untuk memberikan judul aplikasi.
+          'Klinik APP',
+
+      //Properti debugShowCheckedModeBanner digunakan untuk menampilkan atau menyembunyikan banner "Debug" di sudut kanan atas aplikasi.
       debugShowCheckedModeBanner: false,
+
+      //Properti home menetapkan halaman utama aplikasi sebagai PoliPage(), yang merupakan halaman pertama yang akan ditampilkan saat aplikasi dijalankan.
       home: PoliPage(),
     );
   }
 }
-//Properti title digunakan untuk memberikan judul aplikasi.
-//Properti debugShowCheckedModeBanner digunakan untuk menampilkan atau menyembunyikan banner "Debug" di sudut kanan atas aplikasi.
-//Properti home menetapkan halaman utama aplikasi sebagai PoliPage(), yang merupakan halaman pertama yang akan ditampilkan saat aplikasi dijalankan.
-//Mengembalikan sebuah MaterialApp, yang merupakan root widget dari aplikasi. Properti title digunakan untuk memberikan judul pada aplikasi. debugShowCheckedModeBanner diatur sebagai false untuk menghilangkan label "Debug" pada banner. Properti home menetapkan PoliPage() sebagai halaman utama yang akan ditampilkan saat aplikasi dijalankan.
-//Dengan demikian, kode tersebut membangun dan menjalankan aplikasi Flutter yang menampilkan halaman PoliPage sebagai halaman utama dengan judul "Klinik APP".

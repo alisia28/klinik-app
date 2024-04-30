@@ -29,8 +29,11 @@ class _PoliDetailState extends State<PoliDetail> {
             "Nama Poli : ${widget.poli.namaPoli}",
             style: TextStyle(fontSize: 20),
           ),
-          SizedBox(height: 20),
+          SizedBox(
+              height:
+                  20), //SizedBox digunakan untuk memberikan jarak vertikal di antara elemen-elemen.
           Row(
+            //Row yang berisi dua ElevatedButton (tombol yang ditinggikan) dengan teks "Ubah" dan "Hapus" masing-masing. Tombol-tombol ini tidak memiliki fungsi yang ditentukan (onPressed: () {}) dalam contoh ini.
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
@@ -49,7 +52,3 @@ class _PoliDetailState extends State<PoliDetail> {
     );
   }
 }
-//Metode ini membangun tampilan halaman detail poli menggunakan widget Scaffold sebagai kerangka utama.
-//SizedBox digunakan untuk memberikan jarak vertikal di antara elemen-elemen.
-//Text menampilkan nama poli menggunakan properti namaPoli yang ada pada objek widget.poli.
-//Row digunakan untuk menampilkan dua tombol: "Ubah" dan "Hapus". Tombol-tombol ini menggunakan widget ElevatedButton dengan tampilan dan fungsi yang berbeda.
