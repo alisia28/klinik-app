@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; //mengimport
 import '../widget/sidebar.dart';
 
 class Beranda extends StatelessWidget {
