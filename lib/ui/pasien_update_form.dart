@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import '../model/pasien.dart';
-import 'pasien_detail.dart';
+import 'package:flutter/material.dart'; //Package ini menyediakan widget dan komponen UI untuk membangun aplikasi Flutter.
+import '../model/pasien.dart'; //file ini berisi definisi kelas Pasien yang digunakan dalam aplikasi.
+import 'pasien_detail.dart'; //mengasumsikan bahwa file tersebut berisi implementasi halaman detail pasien.
 
 class PasienUpdateForm extends StatefulWidget {
   final Pasien pasien;

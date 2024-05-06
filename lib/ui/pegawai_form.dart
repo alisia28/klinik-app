@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import '../model/pegawai.dart';
-import 'pegawai_detail.dart';
+import 'package:flutter/material.dart'; //menyediakan widget dan komponen UI untuk membangun aplikasi Flutter.
+import '../model/pegawai.dart'; //file ini berisi definisi kelas Pegawai yang digunakan dalam aplikasi.
+import 'pegawai_detail.dart'; //mengasumsikan bahwa file tersebut berisi implementasi halaman detail pegawai.
 
 class PegawaiForm extends StatefulWidget {
   const PegawaiForm({Key? key}) : super(key: key);

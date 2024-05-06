@@ -1,18 +1,22 @@
-import 'package:flutter/material.dart';
-import 'pasien_page.dart';
-import 'pasien_update_form.dart';
-import '../model/pasien.dart';
+import 'package:flutter/material.dart'; //pernyataan impor yang mengimpor paket flutter/material.dart.
+import 'pasien_page.dart'; //pernyataan impor untuk mengimpor file pasien_page.dart. File ini mungkin berisi definisi halaman Pasien.
+import 'pasien_update_form.dart'; //pernyataan impor untuk mengimpor file pasien_update_form.dart. File ini mungkin berisi definisi form untuk mengubah data pasien.
+import '../model/pasien.dart'; // pernyataan impor untuk mengimpor file pasien.dart dari direktori teratas dalam struktur proyek.
 
 class PasienDetail extends StatefulWidget {
-  final Pasien pasien;
+  //kelas PasienDetail yang merupakan turunan dari kelas StatefulWidget.
+  final Pasien pasien; //deklarasi variabel pasien yang bertipe Pasien.
 
-  const PasienDetail({super.key, required this.pasien});
+  const PasienDetail(
+      {super.key, required this.pasien}); // konstruktor kelas PasienDetail.
 
-  @override
-  State<PasienDetail> createState() => _PasienDetailState();
+  @override // anotasi yang menandakan bahwa metode yang mengikuti ini akan menggantikan (override) metode dengan nama yang sama dari kelas induk.
+  State<PasienDetail> createState() =>
+      _PasienDetailState(); //digunakan untuk membuat instance dari kelas _PasienDetailState, yang merupakan kelas yang mengelola keadaan (state) dari widget PasienDetail.
 }
 
 class _PasienDetailState extends State<PasienDetail> {
+  //Kelas ini bertanggung jawab untuk mengelola keadaan (state) dari widget PasienDetail.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,8 +93,11 @@ class _PasienDetailState extends State<PasienDetail> {
             "Alamat : ${widget.pasien.alamat}",
             style: TextStyle(fontSize: 20),
           ),
-          SizedBox(height: 20),
+          SizedBox(
+              height:
+                  20), //Ini adalah widget SizedBox yang digunakan untuk memberikan jarak vertikal sebesar 20 piksel.
           Row(
+            //digunakan untuk mengatur widget-widget lain secara horizontal dalam bentuk baris.
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               _tombolUbah(),

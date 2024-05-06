@@ -1,19 +1,28 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; // pernyataan impor yang mengimpor paket flutter/material.dart.
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  //Kelas ini akan digunakan untuk membangun tampilan halaman login dalam aplikasi.
+  const Login({Key? key})
+      : super(key: key); //Ini adalah konstruktor kelas Login.
 
-  @override
-  _LoginState createState() => _LoginState();
+  @override //anotasi yang menandakan bahwa metode yang mengikuti ini akan menggantikan (override) metode dengan nama yang sama dari kelas induk.
+  _LoginState createState() =>
+      _LoginState(); //digunakan untuk membuat instance dari kelas _LoginState, yang merupakan kelas yang mengelola keadaan (state) dari widget Login.
 }
 
 class _LoginState extends State<Login> {
-  final _formKey = GlobalKey<FormState>();
-  final _usernameCtrl = TextEditingController();
-  final _passwordCtrl = TextEditingController();
+  //Kelas ini bertanggung jawab untuk mengelola keadaan (state) dari widget Login.
+  final _formKey = GlobalKey<
+      FormState>(); // digunakan untuk mengakses dan memanipulasi status dan data yang terkait dengan form.
+  final _usernameCtrl =
+      TextEditingController(); //digunakan untuk mengontrol input teks pada field username.
+
+  final _passwordCtrl =
+      TextEditingController(); //digunakan untuk mengontrol input teks pada field password.
 
   @override
   Widget build(BuildContext context) {
+    // metode build yang menggantikan metode build dari kelas _LoginState.
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
@@ -38,7 +47,7 @@ class _LoginState extends State<Login> {
                           SizedBox(height: 20),
                           _passwordTextField(),
                           SizedBox(height: 40),
-                          _tombolLogin(),
+                          _tombolLogin(), //ini adalah pemanggilan metode _tombolLogin() yang mengembalikan widget Container yang berisi tombol login.
                         ],
                       ),
                     ),

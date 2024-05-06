@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import '../model/pegawai.dart';
-import 'pegawai_detail.dart';
+import 'package:flutter/material.dart'; //Baris ini mengimpor pustaka material dari Flutter
+import '../model/pegawai.dart'; // Baris ini mengimpor file 'pegawai.dart' dari jalur relatif. Sepertinya ini mengimpor sebuah model untuk pegawai.
+import 'pegawai_detail.dart'; // Baris ini mengimpor file 'pegawai_detail.dart',
 
 class PegawaiUpdateForm extends StatefulWidget {
   final Pegawai pegawai;
