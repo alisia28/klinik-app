@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart'; // Paket ini menyediakan berbagai widget dan alat yang diperlukan untuk membangun antarmuka pengguna (UI) dalam aplikasi Flutter.
 import '../widget/sidebar.dart'; // pernyataan impor yang mengimpor file sidebar.dart dari direktori yang berbeda.
+=======
+import 'package:flutter/material.dart'; //mengimport
+import '../widget/sidebar.dart';
+>>>>>>> 14037cffa6841063920a516a54fe9e2fc6602c79
 
 class Beranda extends StatelessWidget {
   //definisi kelas Beranda yang merupakan turunan dari kelas StatelessWidget.
