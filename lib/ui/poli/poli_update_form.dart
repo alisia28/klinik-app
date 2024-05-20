@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'; // Baris ini mengimpor pustaka material dari Flutter yang diperlukan
-import '../model/poli.dart'; //Baris ini mengimpor file 'poli.dart' dari jalur relatif, yang berisi definisi model untuk poli.
-import '../ui/poli_detail.dart'; // Baris ini mengimpor file 'poli_detail.dart',digunakan untuk menampilkan detail poli setelah perubahan disimpan.
+import '../../model/poli.dart'; //Baris ini mengimpor file 'poli.dart' dari jalur relatif, yang berisi definisi model untuk poli.
+import 'poli_detail.dart'; // Baris ini mengimpor file 'poli_detail.dart',digunakan untuk menampilkan detail poli setelah perubahan disimpan.
 
 class PoliUpdateForm extends StatefulWidget {
   //mendefinisikan kelas 'PoliUpdateForm' yang merupakan turunan dari 'StatefulWidget'.

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'; // Baris ini mengimpor pustaka material dari Flutter yang diperlukan untuk membangun antarmuka pengguna.
-import '../widget/sidebar.dart'; //Baris ini mengimpor file 'sidebar.dart'
-import '../model/poli.dart'; // Baris ini mengimpor file 'poli.dart' yang berisi definisi model untuk poli.
+import '../../widget/sidebar.dart'; //Baris ini mengimpor file 'sidebar.dart'
+import '../../model/poli.dart'; // Baris ini mengimpor file 'poli.dart' yang berisi definisi model untuk poli.
 import 'poli_detail.dart'; // Baris ini mengimpor file 'poli_detail.dart', yang kemungkinan berisi implementasi detail poli.
 import 'poli_item.dart'; // Baris ini mengimpor file 'poli_item.dart', yang kemungkinan berisi implementasi item untuk daftar poli.
 import 'poli_form.dart'; //Baris ini mengimpor file 'poli_form.dart', yang kemungkinan berisi implementasi formulir untuk menambahkan atau mengubah data poli.

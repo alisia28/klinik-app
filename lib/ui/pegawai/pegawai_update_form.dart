@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart'; //Baris ini mengimpor pustaka material dari Flutter
-import '../model/pegawai.dart'; // Baris ini mengimpor file 'pegawai.dart' dari jalur relatif. Sepertinya ini mengimpor sebuah model untuk pegawai.
+import '../../model/pegawai.dart'; // Baris ini mengimpor file 'pegawai.dart' dari jalur relatif. Sepertinya ini mengimpor sebuah model untuk pegawai.
 import 'pegawai_detail.dart'; // Baris ini mengimpor file 'pegawai_detail.dart',
 
 class PegawaiUpdateForm extends StatefulWidget {
@@ -48,6 +48,8 @@ class _PegawaiUpdateFormState extends State<PegawaiUpdateForm> {
   }
 
   _tombolSimpan() {
+    //menyimpan perubahan yang telah dilakukan pada nama pegawai.
+
     return ElevatedButton(
         onPressed: () {
           Pegawai pegawai = new Pegawai(namaPegawai: _namaPegawaiCtrl.text);

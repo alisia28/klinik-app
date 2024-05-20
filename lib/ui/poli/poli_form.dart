@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart'; //Baris ini mengimpor pustaka material dari Flutter yang diperlukan untuk membangun antarmuka pengguna
-import '../model/poli.dart'; //baris ini mengimpor file 'poli.dart' dari jalur relatif.
+import '../../model/poli.dart'; //baris ini mengimpor file 'poli.dart' dari jalur relatif.
 import 'poli_detail.dart'; // Baris ini mengimpor file 'poli_detail.dart',
 
 class PoliForm extends StatefulWidget {
@@ -13,7 +13,6 @@ class _PoliFormState extends State<PoliForm> {
 
   @override
   Widget build(BuildContext context) {
-    //adalah metode 'build' yang akan merender tampilan widget 'PoliDetail'.
     return Scaffold(
       appBar: AppBar(title: const Text("Tambah Poli")),
       body: SingleChildScrollView(
@@ -28,7 +27,6 @@ class _PoliFormState extends State<PoliForm> {
   }
 
   _fieldNamaPoli() {
-    //mengembalikan sebuah widget TextField yang digunakan untuk memasukkan atau mengubah nama poli.
     return TextField(
       decoration: const InputDecoration(labelText: "Nama Poli"),
       controller: _namaPoliCtrl,
@@ -36,7 +34,6 @@ class _PoliFormState extends State<PoliForm> {
   }
 
   _tombolSimpan() {
-    //mengembalikan sebuah widget ElevatedButton yang bertindak sebagai tombol untuk menyimpan data poli.
     return ElevatedButton(
       onPressed: () {
         Poli poli = new Poli(namaPoli: _namaPoliCtrl.text);

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../ui/beranda.dart';
 import '../ui/login.dart';
-import '../ui/poli_page.dart';
-import '../ui/pasien_page.dart';
-import '../ui/pegawai_page.dart';
+import '../ui/poli/poli_page.dart';
+import '../ui/pasien/pasien_page.dart';
+import '../ui/pegawai/pegawai_page.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({Key? key}) : super(key: key);

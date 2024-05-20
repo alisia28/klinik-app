@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart'; //Package ini menyediakan widget dan komponen UI untuk membangun aplikasi Flutter.
-import '../model/pasien.dart'; //file ini berisi definisi kelas Pasien yang digunakan dalam aplikasi.
+import '../../model/pasien.dart'; //file ini berisi definisi kelas Pasien yang digunakan dalam aplikasi.
 import 'pasien_detail.dart'; //mengasumsikan bahwa file tersebut berisi implementasi halaman detail pasien.
 
 class PasienUpdateForm extends StatefulWidget {
@@ -48,6 +48,7 @@ class _PasienUpdateFormState extends State<PasienUpdateForm> {
   }
 
   _tombolSimpan() {
+    //menyimpan perubahan yang telah dilakukan pada nama pasien.
     return ElevatedButton(
         onPressed: () {
           Pasien pasien = new Pasien(namaPasien: _namaPasienCtrl.text);

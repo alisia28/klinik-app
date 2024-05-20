@@ -1,31 +1,27 @@
-import 'package:flutter/material.dart'; //pernyataan impor yang mengimpor paket flutter/material.dart.
-import 'pasien_page.dart'; //pernyataan impor untuk mengimpor file pasien_page.dart. File ini mungkin berisi definisi halaman Pasien.
-import 'pasien_update_form.dart'; //pernyataan impor untuk mengimpor file pasien_update_form.dart. File ini mungkin berisi definisi form untuk mengubah data pasien.
-import '../model/pasien.dart'; // pernyataan impor untuk mengimpor file pasien.dart dari direktori teratas dalam struktur proyek.
+import 'package:flutter/material.dart';
+import 'pegawai_page.dart';
+import 'pegawai_update_form.dart';
+import '../../model/pegawai.dart';
 
-class PasienDetail extends StatefulWidget {
-  //kelas PasienDetail yang merupakan turunan dari kelas StatefulWidget.
-  final Pasien pasien; //deklarasi variabel pasien yang bertipe Pasien.
+class PegawaiDetail extends StatefulWidget {
+  final Pegawai pegawai;
 
-  const PasienDetail(
-      {super.key, required this.pasien}); // konstruktor kelas PasienDetail.
+  const PegawaiDetail({super.key, required this.pegawai});
 
-  @override // anotasi yang menandakan bahwa metode yang mengikuti ini akan menggantikan (override) metode dengan nama yang sama dari kelas induk.
-  State<PasienDetail> createState() =>
-      _PasienDetailState(); //digunakan untuk membuat instance dari kelas _PasienDetailState, yang merupakan kelas yang mengelola keadaan (state) dari widget PasienDetail.
+  @override
+  State<PegawaiDetail> createState() => _PegawaiDetailState();
 }
 
-class _PasienDetailState extends State<PasienDetail> {
-  //Kelas ini bertanggung jawab untuk mengelola keadaan (state) dari widget PasienDetail.
+class _PegawaiDetailState extends State<PegawaiDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Detail Pasien")),
+      appBar: AppBar(title: Text("Detail Pegawai")),
       body: Column(
         children: [
           SizedBox(height: 20),
           Text(
-            "Nama Pasien : ${widget.pasien.namaPasien}",
+            "Nama Pegawai : ${widget.pegawai.namaPegawai}",
             style: TextStyle(fontSize: 20),
           ),
           SizedBox(height: 20),
@@ -38,7 +34,7 @@ class _PasienDetailState extends State<PasienDetail> {
           ),
           SizedBox(height: 20),
           Text(
-            "ID Pasien : ${widget.pasien.idPasien}",
+            "ID Pegawai : ${widget.pegawai.idPegawai}",
             style: TextStyle(fontSize: 20),
           ),
           SizedBox(height: 20),
@@ -51,7 +47,7 @@ class _PasienDetailState extends State<PasienDetail> {
           ),
           SizedBox(height: 20),
           Text(
-            "Nomor RM : ${widget.pasien.nomor_rm}",
+            "NIP : ${widget.pegawai.nip}",
             style: TextStyle(fontSize: 20),
           ),
           SizedBox(height: 20),
@@ -64,7 +60,7 @@ class _PasienDetailState extends State<PasienDetail> {
           ),
           SizedBox(height: 20),
           Text(
-            "Tanggal Lahir : ${widget.pasien.tanggal_lahir}",
+            "Tanggal Lahir : ${widget.pegawai.tanggal_lahir}",
             style: TextStyle(fontSize: 20),
           ),
           SizedBox(height: 20),
@@ -77,7 +73,7 @@ class _PasienDetailState extends State<PasienDetail> {
           ),
           SizedBox(height: 20),
           Text(
-            "Nomor Telepon : ${widget.pasien.nomor_telepon}",
+            "Nomor Telepon : ${widget.pegawai.nomor_telepon}",
             style: TextStyle(fontSize: 20),
           ),
           SizedBox(height: 20),
@@ -90,14 +86,24 @@ class _PasienDetailState extends State<PasienDetail> {
           ),
           SizedBox(height: 20),
           Text(
-            "Alamat : ${widget.pasien.alamat}",
+            "Email : ${widget.pegawai.email}",
             style: TextStyle(fontSize: 20),
           ),
-          SizedBox(
-              height:
-                  20), //Ini adalah widget SizedBox yang digunakan untuk memberikan jarak vertikal sebesar 20 piksel.
+          SizedBox(height: 20),
           Row(
-            //digunakan untuk mengatur widget-widget lain secara horizontal dalam bentuk baris.
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              _tombolUbah(),
+              _tombolHapus(),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            "Password : ${widget.pegawai.password}",
+            style: TextStyle(fontSize: 20),
+          ),
+          SizedBox(height: 20),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               _tombolUbah(),
@@ -116,10 +122,10 @@ class _PasienDetailState extends State<PasienDetail> {
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      PasienUpdateForm(pasien: widget.pasien)));
+                      PegawaiUpdateForm(pegawai: widget.pegawai)));
         },
         style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 38, 189, 44)),
+            backgroundColor: Color.fromARGB(255, 110, 179, 116)),
         child: const Text("Ubah"));
   }
 
@@ -129,17 +135,15 @@ class _PasienDetailState extends State<PasienDetail> {
           AlertDialog alertDialog = AlertDialog(
             content: const Text("Yakin ingin menghapus data ini?"),
             actions: [
-              // tombol ya
               ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => PasienPage()));
+                      MaterialPageRoute(builder: (context) => PegawaiPage()));
                 },
                 child: const Text("YA"),
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               ),
-              // tombol batal
               ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
